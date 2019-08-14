@@ -25,7 +25,11 @@ impl Game{
     for i in self.board.iter(){
       print!("y{}  ", index);
       for j in i.iter(){
-        print!("{}   ",j);
+        if *j != 0{
+          print!("{}   ",j);
+        } else {
+          print!("    ");
+        }
       }
       index += 1;
       println!();
